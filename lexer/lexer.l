@@ -1,0 +1,113 @@
+MAP map
+LIST list
+DIRECTEDGRAPH grd
+UNDIRECTEDGRAPH gru
+VERTEX vertex
+EDGE edge
+QUERY query
+QUERYINGFOREQUAL ==
+ASSIGN <-
+DIRECTEDLINE ->
+UNDIRECTEDLINE  --
+QUERYSTART §
+INCLUDE $i
+STARTWITH $s
+ENDWITH $e
+SUBSTRING $d
+PREDICATE $p
+EDGESTART £
+EDGEFINISH \/£
+ASSOCIATE :
+PLUS \+
+MINUS \-
+MUL \*
+DIV \/
+DOT \.
+COMMA ,
+NOT !
+QUESTION \?
+OR \|
+LESSTHAN <
+LESSTHANEQUAL <=
+GREATERTHAN >
+GREATERTHENEQUAL >=
+LEFTPARAM \(
+RIGHTPARAM \)
+LEFTBRACKET \[
+RIGHTBRACKET \]
+LEFTBRACE \{
+RIGHTBRACE \}
+SPACE [ \t]+
+DIGIT [0-9]
+LETTER [a-zA-Z]
+NEWLINE \n
+NONSTAR [^\*]
+NONSTARNONDIV [^\*/]
+NONNEWLINE [^\n]
+UNDERSCORE _
+COMMENT {DIV}{DIV}{NONNEWLINE}*{NEWLINE}|{DIV}\*({NONSTAR}|\*+{NONSTARNONDIV})*\*+{DIV}
+ID ({LETTER}|{UNDERSCORE})({LETTER}|{DIGIT}|{UNDERSCORE})*
+INT ({MINUS}|{PLUS})?{DIGIT}+
+FLOAT {INT}"."{DIGIT}+
+STRING \"([^\\\"]|\\n|\\t|\\\\|\\\")*\"
+
+
+%%
+{MAP} printf( "<MAP>");
+{LIST} printf( "<LIST>");
+{DIRECTEDGRAPH} printf( "<DIRECTEDGRAPH>");
+{UNDIRECTEDGRAPH} printf( "<UNDIRECTEDGRAPH>");
+{VERTEX} printf( "<VERTEX>");
+{EDGE} printf( "<EDGE>");
+{QUERY} printf("<QUERY>");
+{QUERYINGFOREQUAL} printf("<QUERYINGFOREQUAL>");
+{ASSIGN} printf("<ASSIGN>");
+{DIRECTEDLINE} printf("<DIRECTEDLINE>");
+{UNDIRECTEDLINE} printf("<UNDIRECTEDLINE>");
+{QUERYSTART} printf("<QUERYSTART>");
+{INCLUDE} printf("<INCLUDE>");
+{STARTWITH} printf("<STARTWITH>");
+{ENDWITH} printf("<ENDWITH>");
+{SUBSTRING} printf("<SUBSTRING>");
+{PREDICATE} printf("<PREDICATE>");
+{EDGESTART} printf("<EDGESTART>");
+{EDGEFINISH} printf("<EDGEFINISH>");
+{ASSOCIATE} printf("<ASSOCIATE>");
+{PLUS} printf("<PLUS>");
+{MINUS} printf("<MINUS>");
+{MUL} printf("<STAR>");
+{DIV} printf("<DIV>");
+{DOT} printf( "<DOT>");
+{COMMA} printf( "<COMMA>" );
+{NOT} printf("<NOT>");
+{QUESTION} printf( "<QUESTION>");
+{OR} printf( "<OR>");
+{LESSTHAN} printf("<LESSTHAN>");
+{LESSTHANEQUAL} printf("<LESSTHANEQUAL>");
+{GREATERTHAN} printf("<GREATERTHAN>");
+{GREATERTHENEQUAL} printf("<GREATERTHENEQUAL>");
+{LEFTPARAM} printf("<LEFTPARAM>");
+{RIGHTPARAM} printf("<RIGHTPARAM>");
+{LEFTBRACKET} printf("<LEFTBRACKET>");
+{RIGHTBRACKET} printf("<RIGHTBRACKET>");
+{LEFTBRACE} printf("<LEFTBRACE>");
+{RIGHTBRACE} printf("<RIGHTBRACE>");
+{SPACE} ;
+{COMMENT} ;
+{NEWLINE} printf( "\n");
+{ID} printf("<ID,%s>",yytext);
+{INT} printf("<INT,%s>",yytext);
+{FLOAT} printf("<FLOAT,%s>",yytext);
+{STRING} printf("<STRING,%s>",yytext);
+
+%%
+
+int main()
+{
+/*
+
+*/
+	yylex();
+	return 0;
+}
+
