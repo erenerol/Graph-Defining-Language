@@ -1,0 +1,8 @@
+
+gru graph { 
+vertex v<-{(key:k)}
+vertex b
+b<-{(key2:a)}
+
+edge
+}

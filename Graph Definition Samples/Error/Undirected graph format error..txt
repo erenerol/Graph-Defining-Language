@@ -1,0 +1,8 @@
+
+gru { 
+vertex v<-{(key:k)}
+vertex b
+b<-{(key2:a)}
+
+edge v->b {(key3:eren)}
+}

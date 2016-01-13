@@ -1,0 +1,6 @@
+v<-a/
+grd graph { 
+vertex v<-{(eren:erol)}
+vertex c
+b<-{(eren:c)}
+}

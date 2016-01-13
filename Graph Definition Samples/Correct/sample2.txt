@@ -1,0 +1,7 @@
+v <- c
+gru graph { 
+vertex asd<-{(abc:v)}
+vertex cscscs
+b<-{(eren:c)}
+edge v—e { (Relationship : Group_members) }
+}

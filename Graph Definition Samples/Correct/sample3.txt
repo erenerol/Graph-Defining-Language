@@ -1,0 +1,5 @@
+grd graph { 
+vertex v<-{(kaan:akinci)}
+vertex eren
+b<-{(eren:c)}
+}

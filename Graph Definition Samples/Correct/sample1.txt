@@ -1,0 +1,7 @@
+gru graph { 
+vertex first
+first <- {(best:project)}
+vertex second <- {(full:grade)}
+
+edge first—second {(best:group),(ever:been)}
+}

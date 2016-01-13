@@ -1,0 +1,8 @@
+
+grd graph { 
+vertex v<-{(str:k)}
+vertex c
+b<-{(anystring:c)}
+
+edge
+}
