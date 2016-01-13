@@ -1,1 +1,0 @@
-q4 <- £ "University" $s "bil" /£ ["Names" $d(:2) "Er" ]

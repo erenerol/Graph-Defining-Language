@@ -1,1 +1,0 @@
-query q3 <- £Relationship == Group members
