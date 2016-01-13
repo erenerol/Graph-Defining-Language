@@ -1,0 +1,1 @@
+To test the files use “make test”. To make the file use “make” command. The test takes the input from “input” file.
